@@ -1,13 +1,9 @@
----
-import { DarkMode } from 'accessible-astro-components'
----
-
 <nav>
     <a href="/">Home</a>
     <a href="/leaderboard">Leaderboard</a>
     <a href="/signup">Sign Up</a>
     <a href="/login">Login</a>
-    <DarkMode />
+    <!-- <DarkMode class="darkmode-toggle" /> -->
 </nav>
 
 <style>
@@ -17,6 +13,21 @@ import { DarkMode } from 'accessible-astro-components'
         align-items: center;
         gap: 2em;
         margin-top: 2em;
-        font-size: 1.2rem;
+        font-size: 1rem;
+
+        a {
+            /* font-weight: bold; */
+            color: var(--text-700);
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--primary);
+        }
+    }
+
+    .darkmode-toggle {
+        margin-left: auto;
+        border: none;
     }
 </style>

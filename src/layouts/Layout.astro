@@ -1,6 +1,4 @@
 ---
-import '../styles/reset.css'
-import '../styles/theme.css'
 import '../styles/global.css'
 import Nav from '../components/Nav.astro'
 ---
@@ -19,3 +17,10 @@ import Nav from '../components/Nav.astro'
         <slot />
     </body>
 </html>
+
+<style>
+    body {
+        margin: auto;
+        max-width: 1000px;
+    }
+</style>

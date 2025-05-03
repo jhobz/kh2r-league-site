@@ -1,0 +1,45 @@
+---
+interface Props {
+    rank: number
+    img: string
+    name: string
+    points: number
+    averageTime: string
+}
+
+const { rank, img, name, points, averageTime } = Astro.props
+---
+
+<div class="lb-entry">
+    <p class="rank">{rank}</p>
+    <div>
+        <!-- <a href="#"
+            ><Avatar img={img} initials={name.charAt(0)} size="2rem" /></a
+        > -->
+        <a href="#"><p>{name}</p></a>
+    </div>
+    <p class="points">{points}</p>
+    <p class="average-time">{averageTime}</p>
+</div>
+
+<style>
+    .lb-entry {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0.5em;
+        }
+
+        p:last-child {
+            flex-grow: 2;
+            text-align: end;
+        }
+    }
+</style>
