@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "accessible-astro-components": "^4.1.0",
     "astro": "^5.7.10"
   }
 }

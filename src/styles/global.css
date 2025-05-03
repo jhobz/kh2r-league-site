@@ -1,0 +1,16 @@
+html {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a {
+    /* font-family: 'khmenu'; */
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:hover,
+a:focus {
+    /* color: hsla(221, 100%, 60%, 1); */
+    color: var(--primary);
+}

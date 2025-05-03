@@ -1,0 +1,22 @@
+---
+import { DarkMode } from 'accessible-astro-components'
+---
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/leaderboard">Leaderboard</a>
+    <a href="/signup">Sign Up</a>
+    <a href="/login">Login</a>
+    <DarkMode />
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        margin-top: 2em;
+        font-size: 1.2rem;
+    }
+</style>
