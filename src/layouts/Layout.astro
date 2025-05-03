@@ -6,9 +6,25 @@ import Nav from '../components/Nav.astro'
 <!doctype html>
 <html lang="en">
     <head>
+        <script is:inline>
+            // ☝️ This script prevents the flash of inaccurate color theme.
+            if (localStorage.getItem('theme') === null) {
+                document.documentElement.setAttribute('data-theme', 'light')
+            } else
+                document.documentElement.setAttribute(
+                    'data-theme',
+                    localStorage.getItem('theme')
+                )
+            // "theme" LocalStorage value is set by the package to remember user preference.
+            // The value is checked and applyed before rendering anything.
+        </script>
+        <script>
+            import { themeChange } from 'theme-change'
+            themeChange()
+        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
         <title>KH2 Randomizer League</title>
     </head>
@@ -17,10 +33,3 @@ import Nav from '../components/Nav.astro'
         <slot />
     </body>
 </html>
-
-<style>
-    body {
-        margin: auto;
-        max-width: 1000px;
-    }
-</style>
