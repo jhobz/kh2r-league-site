@@ -5,4 +5,22 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout>
     <Welcome />
+    <button id="seedBtn" class="btn btn-primary">Get seed</button>
+    <p id="response"></p>
 </Layout>
+
+<script>
+    import { actions } from 'astro:actions'
+
+    const btn = document.querySelector('#seedBtn') as HTMLButtonElement
+    const p = document.querySelector('#response') as HTMLParagraphElement
+
+    btn.addEventListener('click', async () => {
+        const { data, error } = await actions.getRandoSeed()
+        if (error) {
+            console.log('something went wrong', error)
+            return
+        }
+        p.textContent = data
+    })
+</script>
