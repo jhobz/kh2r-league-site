@@ -77,9 +77,9 @@
     --noise: 1;
 }
 
-body {
-    font-family: 'Noto Sans Hanunoo';
-    font-weight: 400;
+:root {
+    --font-sans: 'Noto Sans Hanunoo';
+    --font-headers: 'Sofia Sans Semi Condensed';
 }
 
 h1,
@@ -87,6 +87,6 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Sofia Sans Semi Condensed';
+    font-family: var(--font-headers);
     font-weight: 700;
 }

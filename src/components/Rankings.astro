@@ -7,7 +7,7 @@ const rankings = await getCollection('rankings')
 <div
     class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 mt-4"
 >
-    <table class="table table-sm table-zebra text-center">
+    <table class="table table-md table-zebra text-center">
         <thead>
             <tr>
                 <th>#</th>
@@ -38,7 +38,9 @@ const rankings = await getCollection('rankings')
                                     </div>
                                 </div>
                             )}
-                            <a href="#">{data.name}</a>
+                            <a href="#" class="text-[1rem]">
+                                {data.name}
+                            </a>
                         </td>
                         <td>{data.points}</td>
                         <td>{data.averageTime}</td>
