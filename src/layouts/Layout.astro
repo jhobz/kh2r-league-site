@@ -4,7 +4,7 @@ import Nav from '../components/nav/Nav.astro'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-base-200">
     <head>
         <script is:inline>
             // ☝️ This script prevents the flash of inaccurate color theme.
@@ -30,6 +30,8 @@ import Nav from '../components/nav/Nav.astro'
     </head>
     <body>
         <Nav />
-        <slot />
+        <main class="container mx-auto px-8">
+            <slot />
+        </main>
     </body>
 </html>

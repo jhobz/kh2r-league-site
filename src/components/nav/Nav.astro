@@ -2,7 +2,7 @@
 import ThemeSwitcher from './ThemeSwitcher.astro'
 ---
 
-<nav class="navbar bg-base-100 shadow-sm">
+<nav class="navbar bg-base-200 shadow-lg">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ import ThemeSwitcher from './ThemeSwitcher.astro'
                 <li><a href="/login">Login</a></li>
             </ul>
         </div>
-        <a href="/" class="btn btn-link btn-active text-xl">
+        <a href="/" class="flex gap-1 items-center text-xl ml-2">
             <img class="size-8" src="/favicon.png" /><span
                 >KH2 Rando League</span
             ></a
@@ -52,10 +52,3 @@ import ThemeSwitcher from './ThemeSwitcher.astro'
         <ThemeSwitcher />
     </div>
 </nav>
-
-<style>
-    .btn-link {
-        color: inherit;
-        text-decoration: none;
-    }
-</style>

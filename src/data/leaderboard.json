@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "rank": 1,
+        "name": "JHobz",
+        "img": "",
+        "points": 1350,
+        "averageTime": "2:02:12"
+    },
+    {
+        "id": 1,
+        "rank": 2,
+        "name": "ZakTheRobot",
+        "img": "",
+        "points": 1200,
+        "averageTime": "2:03:12"
+    },
+    {
+        "id": 2,
+        "rank": 3,
+        "name": "Atzero",
+        "img": "",
+        "points": 1121,
+        "averageTime": "2:04:12"
+    },
+    {
+        "id": 3,
+        "rank": 4,
+        "name": "Spikevegeta",
+        "img": "",
+        "points": 1094,
+        "averageTime": "2:05:12"
+    },
+    {
+        "id": 4,
+        "rank": 5,
+        "name": "riopeace",
+        "img": "",
+        "points": 916,
+        "averageTime": "2:06:12"
+    },
+    {
+        "id": 5,
+        "rank": 6,
+        "name": "RebelWatt",
+        "img": "",
+        "points": 855,
+        "averageTime": "2:07:12"
+    },
+    {
+        "id": 6,
+        "rank": 7,
+        "name": "Aceuhh",
+        "img": "",
+        "points": 723,
+        "averageTime": "2:08:12"
+    },
+    {
+        "id": 7,
+        "rank": 8,
+        "name": "Komi",
+        "img": "",
+        "points": 698,
+        "averageTime": "2:09:12"
+    },
+    {
+        "id": 8,
+        "rank": 9,
+        "name": "CJ",
+        "img": "",
+        "points": 555,
+        "averageTime": "2:10:12"
+    }
+]
