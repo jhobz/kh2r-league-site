@@ -5,22 +5,57 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout>
     <Welcome />
-    <button id="seedBtn" class="btn btn-primary">Get seed</button>
+    <button id="seedBtn" class="btn btn-primary" data-loading="false"
+        ><span class="loading loading-bars loading-md"></span><span class="text"
+            >Get seed</span
+        ></button
+    >
     <p id="response"></p>
 </Layout>
+
+<style>
+    button[data-loading='false'] {
+        & > .loading {
+            display: none;
+        }
+
+        & > .text {
+            display: inline;
+        }
+    }
+    button[data-loading='true'] {
+        & > .loading {
+            display: inline;
+        }
+
+        & > .text {
+            display: none;
+        }
+    }
+</style>
 
 <script>
     import { actions } from 'astro:actions'
 
     const btn = document.querySelector('#seedBtn') as HTMLButtonElement
+    const btnWidth = btn.clientWidth
     const p = document.querySelector('#response') as HTMLParagraphElement
 
     btn.addEventListener('click', async () => {
+        btn.setAttribute('data-loading', 'true')
+        btn.style.width = `${btnWidth}px`
+        btn.disabled = true
+        p.textContent = 'Retrieving seed... (this may take up to 2 minutes)'
+
         const { data, error } = await actions.getRandoSeed()
         if (error) {
             console.log('something went wrong', error)
             return
         }
         p.textContent = data
+
+        btn.setAttribute('data-loading', 'false')
+        btn.disabled = false
+        btn.style.width = 'auto'
     })
 </script>
