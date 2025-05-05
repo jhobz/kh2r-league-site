@@ -1,4 +1,4 @@
-FROM node:22-lts AS runtime
+FROM node:22 AS runtime
 WORKDIR /app
 
 COPY . .
