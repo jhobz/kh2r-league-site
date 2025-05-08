@@ -14,6 +14,10 @@ import Layout from '../layouts/Layout.astro'
 </Layout>
 
 <style>
+    button {
+        width: 7rem;
+    }
+
     button[data-loading='false'] {
         & > .loading {
             display: none;
@@ -38,12 +42,10 @@ import Layout from '../layouts/Layout.astro'
     import { actions } from 'astro:actions'
 
     const btn = document.querySelector('#seedBtn') as HTMLButtonElement
-    const btnWidth = btn.clientWidth
     const p = document.querySelector('#response') as HTMLParagraphElement
 
     btn.addEventListener('click', async () => {
         btn.setAttribute('data-loading', 'true')
-        btn.style.width = `${btnWidth}px`
         btn.disabled = true
         p.textContent = 'Retrieving seed... (this may take up to 2 minutes)'
 
@@ -56,6 +58,5 @@ import Layout from '../layouts/Layout.astro'
 
         btn.setAttribute('data-loading', 'false')
         btn.disabled = false
-        btn.style.width = 'auto'
     })
 </script>
