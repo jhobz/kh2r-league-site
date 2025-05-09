@@ -1,0 +1,121 @@
+---
+import type { CollectionEntry } from 'astro:content'
+interface Props {
+    worlds: Array<CollectionEntry<'randoRoute'>>
+}
+
+const { worlds } = Astro.props
+const bossClasses = [
+    'bg-linear-to-r from-(--color-highlight) to-transparent',
+    'text-lg',
+    'text-(--color-fill)',
+    'uppercase',
+    'font-bold',
+].join(' ')
+---
+
+{
+    worlds.map(({ data: { world, rooms } }) => (
+        <section
+            class="rounded-box border-2 border-(--color-highlight) overflow-clip w-sm"
+            data-world={world.abbr}
+        >
+            <header class="flex items-end uppercase text-2xl bg-(--color-highlight) text-(--color-fill)">
+                <img
+                    class="px-1 bg-(--color-fill) w-1/10"
+                    src={`/images/worlds/${world.name}.png`}
+                />
+                <h2 class="px-2">{world.name}</h2>
+            </header>
+            <ul class="list bg-(--color-fill)">
+                {rooms.map(({ name, boss }) => (
+                    <li
+                        class={`list-row rounded-none py-1 ${boss && bossClasses}`}
+                    >
+                        {name}
+                    </li>
+                ))}
+            </ul>
+        </section>
+    ))
+}
+
+<style>
+    section[data-world='goa'] {
+        --color-world: var(--color-world-goa);
+    }
+    section[data-world='1aw'] {
+        --color-world: var(--color-world-1aw);
+    }
+    section[data-world='ag'] {
+        --color-world: var(--color-world-ag);
+    }
+    section[data-world='atl'] {
+        --color-world: var(--color-world-atl);
+    }
+    section[data-world='bc'] {
+        --color-world: var(--color-world-bc);
+    }
+    section[data-world='dc'] {
+        --color-world: var(--color-world-dc);
+    }
+    section[data-world='ht'] {
+        --color-world: var(--color-world-ht);
+    }
+    section[data-world='hb'] {
+        --color-world: var(--color-world-hb);
+    }
+    section[data-world='lod'] {
+        --color-world: var(--color-world-lod);
+    }
+    section[data-world='oc'] {
+        --color-world: var(--color-world-oc);
+    }
+    section[data-world='pr'] {
+        --color-world: var(--color-world-pr);
+    }
+    section[data-world='pl'] {
+        --color-world: var(--color-world-pl);
+    }
+    section[data-world='stt'] {
+        --color-world: var(--color-world-stt);
+    }
+    section[data-world='sp'] {
+        --color-world: var(--color-world-sp);
+    }
+    section[data-world='tt'] {
+        --color-world: var(--color-world-tt);
+    }
+    section[data-world='twtnw'] {
+        --color-world: var(--color-world-twtnw);
+    }
+
+    section {
+        --color-highlight: light-dark(
+            oklch(from var(--color-world) calc(l * 0.1) c h),
+            oklch(from var(--color-world) calc(l * 0.9) c h)
+        );
+        --color-fill: light-dark(
+            oklch(from var(--color-world) calc(l * 0.9) c h),
+            oklch(from var(--color-world) calc(l * 0.1) c h)
+        );
+
+        /* border-color: var(--color-highlight); */
+    }
+</style>
+
+<script>
+    import LeaderLine from 'leader-line'
+    const sections = document.querySelectorAll('section')
+    const options = {
+        color: 'var(--color-base-content)',
+        size: 2,
+        // path: 'grid',
+        // startSocket: 'bottom',
+        // endSocket: 'left',
+        // endSocketGravity: 10,
+    }
+    for (let i = 0; i < sections.length - 1; i++) {
+        new LeaderLine(sections[i], sections[i + 1], options)
+    }
+</script>

@@ -1,0 +1,352 @@
+[
+    {
+        "id": "goa",
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": "twtnw",
+        "world": {
+            "name": "The World That Never Was",
+            "abbr": "twtnw"
+        },
+        "rooms": [
+            { "name": "Alley to Between" },
+            { "name": "Fragment Crossing" },
+            {
+                "name": "Roxas",
+                "boss": true
+            },
+            { "name": "Memory's Skyscraper" },
+            { "name": "The Brink of Despair" },
+            { "name": "Nothing's Call" },
+            { "name": "Crooked Ascension" },
+            { "name": "Twilight's View" },
+            { "name": "Hall of Empty Melodies" },
+            { "name": "Naught's Skyway" },
+            { "name": "Proof of Existence" },
+            { "name": "Havoc's Divide" },
+            { "name": "Addled Impasse" },
+            { "name": "Naught's Approach" },
+            { "name": "Ruin and Creaton's Passage" },
+            { "name": "The Altar of Naught" }
+        ]
+    },
+    {
+        "id": "tt",
+        "world": {
+            "name": "Twilight Town",
+            "abbr": "tt"
+        },
+        "rooms": [
+            { "name": "The Usual Spot" },
+            { "name": "Back Alley" },
+            { "name": "Sandlot" },
+            { "name": "Market Street: Station Heights" },
+            { "name": "Market Street: Tram Common" },
+            { "name": "Station Plaza" },
+            { "name": "Central Station" },
+            { "name": "Sunset Station" },
+            { "name": "Sunset Terrace" },
+            { "name": "Sunset Hill" },
+            { "name": "Tunnelway" },
+            { "name": "Underground Concourse" },
+            { "name": "The Woods" },
+            { "name": "The Old Mansion" },
+            { "name": "Mansion: Foyer" },
+            { "name": "Mansion: Dining Room" },
+            { "name": "Mansion: The White Room" },
+            { "name": "Mansion: Library" },
+            { "name": "Mansion: Computer Room" },
+            { "name": "Mansion: Basement Hall" },
+            { "name": "Mansion: Basement Corridor" },
+            { "name": "Mansion: Pod Room" },
+            { "name": "Betwixt and Between" },
+            { "name": "The Tower" },
+            { "name": "Tower: Entryway" },
+            { "name": "Tower: Wayward Stairs" },
+            { "name": "Tower: Star Chamber" },
+            { "name": "Tower: Moon Chamber" },
+            { "name": "Tower: Sorcerer's Loft" },
+            { "name": "Tower: Wardrobe" }
+        ]
+    },
+    {
+        "id": "stt",
+        "world": {
+            "name": "Simulated Twilight Town",
+            "abbr": "stt"
+        },
+        "rooms": [
+            { "name": "The Usual Spot" },
+            { "name": "Back Alley" },
+            { "name": "Sandlot" },
+            { "name": "Market Street: Station Heights" },
+            { "name": "Market Street: Tram Common" },
+            { "name": "Station Plaza" },
+            { "name": "Central Station" },
+            { "name": "Sunset Station" },
+            { "name": "Sunset Terrace" },
+            { "name": "Sunset Hill" },
+            { "name": "The Woods" },
+            { "name": "The Old Mansion" },
+            { "name": "Mansion: Foyer" },
+            { "name": "Mansion: Dining Room" },
+            { "name": "Mansion: The White Room" },
+            { "name": "Mansion: Library" },
+            { "name": "Mansion: Computer Room" },
+            { "name": "Mansion: Basement Hall" },
+            { "name": "Mansion: Basement Corridor" },
+            { "name": "Mansion: Pod Room" }
+        ]
+    },
+    {
+        "id": "oc",
+        "world": {
+            "name": "Olympus Coliseum",
+            "abbr": "oc"
+        },
+        "rooms": [
+            { "name": "Coliseum: Gates" },
+            { "name": "Coliseum: Foyer" },
+            { "name": "The Coliseum" },
+            { "name": "Underworld Entrance" },
+            { "name": "Cave of the Dead: Entrance" },
+            { "name": "Cave of the Dead: Passage" },
+            { "name": "Cave of the Dead: Inner Chamber" },
+            { "name": "Valley of the Dead" },
+            { "name": "Hades' Chamber" },
+            { "name": "Underworld Caverns: Entrance" },
+            { "name": "Underworld Caverns: The Lost Road" },
+            { "name": "Underworld Caverns: Atrium" },
+            { "name": "The Lock" }
+        ]
+    },
+    {
+        "id": "lod",
+        "world": {
+            "name": "Land of Dragons",
+            "abbr": "lod"
+        },
+        "rooms": [
+            { "name": "Bamboo Grove" },
+            { "name": "Encampment" },
+            { "name": "Checkpoint" },
+            { "name": "Mountain Trail" },
+            { "name": "Village" },
+            { "name": "Village Cave" },
+            { "name": "Ridge" },
+            { "name": "Summit" },
+            { "name": "Imperial Square" },
+            { "name": "Palace Gate" },
+            { "name": "Antechamber" },
+            { "name": "Throne Room" }
+        ]
+    },
+    {
+        "id": "hb",
+        "world": {
+            "name": "Hollow Bastion",
+            "abbr": "hb"
+        },
+        "rooms": [
+            { "name": "Marketplace" },
+            { "name": "Borough" },
+            { "name": "Merlin's House" },
+            { "name": "Bailey" },
+            { "name": "Restoration Site" },
+            { "name": "Postern" },
+            { "name": "Corridors" },
+            { "name": "Ansem's Study" },
+            { "name": "Heartless Manufactory" },
+            { "name": "Castle Gate" },
+            { "name": "Ravine Trail" },
+            { "name": "Crystal Fissure" },
+            { "name": "The Great Maw" },
+            { "name": "Cavern of Remembrance: Depths" },
+            { "name": "Cavern of Remembrance: Mineshaft" },
+            { "name": "Cavern of Remembrance: Mining Area" },
+            { "name": "Cavern of Remembrance: Engine Chamber" },
+            { "name": "Transport to Remembrance" },
+            { "name": "Garden of Assemblage" }
+        ]
+    },
+    {
+        "id": "bc",
+        "world": {
+            "name": "Beast's Castle",
+            "abbr": "bc"
+        },
+        "rooms": [
+            { "name": "Entrance Hall" },
+            { "name": "Parlor" },
+            { "name": "The East Wing" },
+            { "name": "Belle's Room" },
+            { "name": "The West Hall" },
+            { "name": "Undercroft" },
+            { "name": "Dungeon" },
+            { "name": "Secret Passage" },
+            { "name": "The West Wing" },
+            { "name": "The Beast's Room" },
+            { "name": "Ballroom" },
+            { "name": "Courtyard" },
+            { "name": "Bridge" }
+        ]
+    },
+    {
+        "id": "1aw",
+        "world": {
+            "name": "100 Acre Wood",
+            "abbr": "1aw"
+        },
+        "rooms": [
+            { "name": "The Hundred Acre Wood" },
+            { "name": "Pooh Bears Howse" },
+            { "name": "Piglets Howse" },
+            { "name": "Rabbits Howse" },
+            { "name": "Kangas Howse" },
+            { "name": "The Spookey Cave" },
+            { "name": "Starry Hill" }
+        ]
+    },
+    {
+        "id": "dc",
+        "world": {
+            "name": "Disney Castle",
+            "abbr": "dc"
+        },
+        "rooms": [
+            { "name": "Gummi Hangar" },
+            { "name": "Courtyard" },
+            { "name": "Colonnade" },
+            { "name": "Library" },
+            { "name": "Audience Chamber" },
+            { "name": "The Hall of the Cornerstone" },
+            { "name": "Cornerstone Hill" },
+            { "name": "Pier" },
+            { "name": "Waterway" },
+            { "name": "Wharf" },
+            { "name": "Building Site" },
+            { "name": "Lilliput" },
+            { "name": "Scene of the Fire" },
+            { "name": "Mickey's House" }
+        ]
+    },
+    {
+        "id": "atl",
+        "world": {
+            "name": "Atlantica",
+            "abbr": "atl"
+        },
+        "rooms": [
+            { "name": "Triton's Throne" },
+            { "name": "Undersea Courtyard" }
+        ]
+    },
+    {
+        "id": "pr",
+        "world": {
+            "name": "Port Royal",
+            "abbr": "pr"
+        },
+        "rooms": [
+            { "name": "Rampart" },
+            { "name": "Harbor" },
+            { "name": "Town" },
+            { "name": "The Interceptor" },
+            { "name": "The Interceptor: Ship's Hold" },
+            { "name": "The Black Pearl" },
+            { "name": "The Black Pearl: Captain's Stateroom" },
+            { "name": "Isla de Muerta: Rock Face" },
+            { "name": "Isla de Muerta: Cave Mouth" },
+            { "name": "Isla de Muerta: Powder Store" },
+            { "name": "Isla de Muerta: Moonlight Nook" },
+            { "name": "Isla de Muerta: Treasure Heap" },
+            { "name": "Ship Graveyard: The Interceptor's Hold" },
+            { "name": "Ship Graveyard: Seadrift Row" },
+            { "name": "Ship Graveyard: Seadrift Keep" }
+        ]
+    },
+    {
+        "id": "ag",
+        "world": {
+            "name": "Agrabah",
+            "abbr": "ag"
+        },
+        "rooms": [
+            { "name": "The Palace" },
+            { "name": "Agrabah" },
+            { "name": "The Peddler's Shop" },
+            { "name": "Bazaar" },
+            { "name": "Palace Walls" },
+            { "name": "The Cave of Wonders: Entrance" },
+            { "name": "The Cave of Wonders: Valley of Stone" },
+            { "name": "The Cave of Wonders: Stone Guardians" },
+            { "name": "The Cave of Wonders: Chasm of Challenges" },
+            { "name": "The Cave of Wonders: Treasure Room" },
+            { "name": "Sandswept Ruins" },
+            { "name": "Ruined Chamber" }
+        ]
+    },
+    {
+        "id": "ht",
+        "world": {
+            "name": "Halloween Town",
+            "abbr": "ht"
+        },
+        "rooms": [
+            { "name": "Dr. Finkelstein's Lab" },
+            { "name": "Halloween Town Square" },
+            { "name": "Graveyard" },
+            { "name": "Curly Hill" },
+            { "name": "Hinterlands" },
+            { "name": "Yuletide Hill" },
+            { "name": "Candy Cane Lane" },
+            { "name": "Santa's House" },
+            { "name": "Toy Factory: Shipping and Receiving" },
+            { "name": "Toy Factory: The Wrapping Room" },
+            { "name": "Christmas Tree Plaza" }
+        ]
+    },
+    {
+        "id": "pl",
+        "world": {
+            "name": "Pride Lands",
+            "abbr": "pl"
+        },
+        "rooms": [
+            { "name": "Peak" },
+            { "name": "The King's Den" },
+            { "name": "Pride Rock" },
+            { "name": "Stone Hollow" },
+            { "name": "The Savannah" },
+            { "name": "Elephant Graveyard" },
+            { "name": "Gorge" },
+            { "name": "Wildebeest Valley" },
+            { "name": "Wastelands" },
+            { "name": "Jungle" },
+            { "name": "Oasis" }
+        ]
+    },
+    {
+        "id": "sp",
+        "world": {
+            "name": "Space Paranoids",
+            "abbr": "sp"
+        },
+        "rooms": [
+            { "name": "Pit Cell" },
+            { "name": "Canyon" },
+            { "name": "Dataspace" },
+            { "name": "I/O Tower: Hallway" },
+            { "name": "I/O Tower: Communications Room" },
+            { "name": "Simulation Hangar" },
+            { "name": "Solar Sailer Simulation" },
+            { "name": "Central Computer: Mesa" },
+            { "name": "Central Computer: Core" }
+        ]
+    }
+]

@@ -12,4 +12,20 @@ const rankings = defineCollection({
     }),
 })
 
-export const collections = { rankings }
+const randoRoute = defineCollection({
+    loader: file('./src/data/route2.json'),
+    schema: z.object({
+        world: z.object({
+            name: z.string(),
+            abbr: z.string(),
+        }),
+        rooms: z.array(
+            z.object({
+                name: z.string(),
+                boss: z.optional(z.boolean()),
+            })
+        ),
+    }),
+})
+
+export const collections = { rankings, randoRoute }

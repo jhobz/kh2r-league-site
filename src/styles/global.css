@@ -67,9 +67,9 @@
     --color-warning-content: oklch(41% 0.112 45.904);
     --color-error: oklch(71% 0.194 13.428);
     --color-error-content: oklch(27% 0.105 12.094);
-    --radius-selector: 0.5rem;
+    --radius-selector: 2rem;
     --radius-field: 0.25rem;
-    --radius-box: 0.5rem;
+    --radius-box: 1rem;
     --size-selector: 0.25rem;
     --size-field: 0.25rem;
     --border: 1px;
@@ -80,6 +80,27 @@
 :root {
     --font-sans: 'Noto Sans Hanunoo';
     --font-headers: 'Sofia Sans Semi Condensed';
+
+    --color-world-twtnw: #b9b7de;
+    --color-world-lod: #ff5533;
+    --color-world-ht: #c180ff;
+    /* --color-world-oc: #ddff50; */
+    --color-world-oc: #6db955;
+    --color-world-tt: #ff8c1a;
+    --color-world-pr: #8299ff;
+    --color-world-sp: #6667cd;
+    /* --color-world-bc: #ff51bf; */
+    --color-world-bc: #ff9bce;
+    --color-world-ag: #febe16;
+    --color-world-pl: #f54933;
+    --color-world-hb: #ff8792;
+    --color-world-dc: #2ecdfd;
+    --color-world-stt: #89c7e6;
+    /* --color-world-1aw: #f9f82b; */
+    --color-world-1aw: #ffff6b;
+    /* --color-world-goa: #000000; */
+    --color-world-goa: #b0e2f8;
+    --color-world-atl: #83ffd5;
 }
 
 h1,

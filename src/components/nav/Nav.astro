@@ -30,10 +30,11 @@ import ThemeSwitcher from './ThemeSwitcher.astro'
                 </li>
                 <li><a href="/signup">Sign Up</a></li>
                 <li><a href="/login">Login</a></li>
+                <li><a href="/routemap">Route Map</a></li>
             </ul>
         </div>
         <a href="/" class="flex gap-1 items-center text-xl ml-2">
-            <img class="size-8" src="/favicon.png" /><span
+            <img class="size-12" src="/images/logo.png" /><span class="logo"
                 >KH2 Rando League</span
             ></a
         >
@@ -44,11 +45,18 @@ import ThemeSwitcher from './ThemeSwitcher.astro'
             <li>
                 <a href="/leaderboard">Leaderboard</a>
             </li>
-            <li><a href="Sign Up">Sign Up</a></li>
-            <li><a href="Login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/routemap">Route Map</a></li>
         </ul>
     </div>
     <div class="navbar-end">
         <ThemeSwitcher />
     </div>
 </nav>
+
+<style>
+    .logo {
+        font-family: 'khmenu';
+    }
+</style>

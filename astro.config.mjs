@@ -1,17 +1,29 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite'
 
-import node from '@astrojs/node';
+import node from '@astrojs/node'
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  },
+    vite: {
+        plugins: [
+            tailwindcss(),
+            // Wrap old dependency that adds var to window
+            {
+                name: 'leader-line',
+                transform(code, id) {
+                    if (id.includes('node_modules/.vite/deps/leader-line')) {
+                        return `${code};export default LeaderLine;`
+                    }
+                    return null
+                },
+            },
+        ],
+    },
 
-  adapter: node({
-    mode: 'standalone'
-  })
-});
+    adapter: node({
+        mode: 'standalone',
+    }),
+})

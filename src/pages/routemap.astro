@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content'
+import RandoRoute from '../components/RandoRoute.astro'
+import Layout from '../layouts/Layout.astro'
+const worlds = await getCollection('randoRoute')
+---
+
+<Layout>
+    <div class="flex flex-col items-center gap-8 p-8">
+        <RandoRoute worlds={worlds} />
+    </div>
+</Layout>

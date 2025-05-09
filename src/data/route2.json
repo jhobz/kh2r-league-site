@@ -1,0 +1,283 @@
+[
+    {
+        "id": 0,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 1,
+        "world": {
+            "name": "Space Paranoids",
+            "abbr": "sp"
+        },
+        "rooms": [
+            { "name": "Pit Cell" },
+            { "name": "Canyon" },
+            { "name": "Pit Cell" }
+        ]
+    },
+    {
+        "id": 2,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 3,
+        "world": {
+            "name": "The World That Never Was",
+            "abbr": "twtnw"
+        },
+        "rooms": [
+            { "name": "Alley to Between" },
+            { "name": "Fragment Crossing" },
+            { "name": "Alley to Between" }
+        ]
+    },
+    {
+        "id": 4,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 5,
+        "world": {
+            "name": "Land of Dragons",
+            "abbr": "lod"
+        },
+        "rooms": [{ "name": "Bamboo Grove" }]
+    },
+    {
+        "id": 6,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 7,
+        "world": {
+            "name": "Halloween Town",
+            "abbr": "ht"
+        },
+        "rooms": [
+            { "name": "Graveyard" },
+            { "name": "Dr. Finkelstein's Lab" },
+            { "name": "Halloween Town Square" },
+            { "name": "Graveyard" },
+            { "name": "Hinterlands" },
+            { "name": "Yuletide Hill" },
+            { "name": "Candy Cane Lane" },
+            { "name": "Santa's House" }
+        ]
+    },
+    {
+        "id": 8,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 9,
+        "world": {
+            "name": "Olympus Coliseum",
+            "abbr": "oc"
+        },
+        "rooms": [
+            { "name": "Underworld Entrance" },
+            { "name": "Cave of the Dead: Entrance" },
+            { "name": "Cave of the Dead: Passage" },
+            { "name": "Cave of the Dead: Inner Chamber" }
+        ]
+    },
+    {
+        "id": 10,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 11,
+        "world": {
+            "name": "Twilight Town",
+            "abbr": "tt"
+        },
+        "rooms": [
+            { "name": "The Old Mansion" },
+            { "name": "The Usual Spot" },
+            { "name": "Back Alley" },
+            { "name": "Sandlot" },
+            { "name": "Market Street: Tram Common" },
+            { "name": "The Woods" },
+            { "name": "Market Street: Tram Common" },
+            { "name": "Market Street: Station Heights" },
+            { "name": "Back Alley" },
+            { "name": "The Usual Spot" }
+        ]
+    },
+    {
+        "id": 12,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 13,
+        "world": {
+            "name": "Disney Castle",
+            "abbr": "dc"
+        },
+        "rooms": [
+            { "name": "Gummi Hangar" },
+            { "name": "Courtyard" },
+            { "name": "Colonnade" },
+            { "name": "Library" }
+        ]
+    },
+    {
+        "id": 14,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 15,
+        "world": {
+            "name": "100 Acre Wood",
+            "abbr": "1aw"
+        },
+        "rooms": [
+            { "name": "The Hundred Acre Wood" },
+            { "name": "Pooh Bears Howse" },
+            { "name": "Piglets Howse" }
+        ]
+    },
+    {
+        "id": 16,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 17,
+        "world": {
+            "name": "Agrabah",
+            "abbr": "ag"
+        },
+        "rooms": [
+            { "name": "The Peddler's Shop" },
+            { "name": "Agrabah" },
+            { "name": "Bazaar" },
+            { "name": "Palace Walls" },
+            { "name": "The Cave of Wonders: Entrance" },
+            { "name": "The Cave of Wonders: Valley of Stone" },
+            { "name": "The Cave of Wonders: Stone Guardians" }
+        ]
+    },
+    {
+        "id": 18,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 19,
+        "world": {
+            "name": "Hollow Bastion",
+            "abbr": "hb"
+        },
+        "rooms": [
+            { "name": "Marketplace" },
+            { "name": "Borough" },
+            { "name": "Merlin's House" },
+            { "name": "Borough" },
+            { "name": "Bailey", "boss": true }
+        ]
+    },
+    {
+        "id": 20,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 21,
+        "world": {
+            "name": "Beast's Castle",
+            "abbr": "bc"
+        },
+        "rooms": [
+            { "name": "Parlor" },
+            { "name": "Entrance Hall" },
+            { "name": "Courtyard" },
+            { "name": "Entrance Hall" },
+            { "name": "Belle's Room" },
+            { "name": "The East Wing" },
+            { "name": "Entrance Hall" },
+            { "name": "The West Hall" },
+            { "name": "Thresholder", "boss": true },
+            { "name": "Undercroft" },
+            { "name": "Dungeon" },
+            { "name": "Undercroft" },
+            { "name": "Secret Passage" },
+            { "name": "The West Hall" },
+            { "name": "The West Wing" },
+            { "name": "Beast", "boss": true },
+            { "name": "The Beast's Room" },
+            { "name": "Ballroom" },
+            { "name": "Bridge" }
+        ]
+    },
+    {
+        "id": 22,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    },
+    {
+        "id": 23,
+        "world": {
+            "name": "Beast's Castle",
+            "abbr": "bc"
+        },
+        "rooms": [
+            { "name": "Belle's Room" },
+            { "name": "The East Wing" },
+            { "name": "Entrance Hall" },
+            { "name": "Shadow Stalker / Dark Thorn", "boss": true }
+        ]
+    },
+    {
+        "id": 24,
+        "world": {
+            "name": "Garden of Assemblage",
+            "abbr": "goa"
+        },
+        "rooms": []
+    }
+]
