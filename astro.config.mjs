@@ -14,7 +14,7 @@ export default defineConfig({
             {
                 name: 'leader-line',
                 transform(code, id) {
-                    if (id.includes('node_modules/.vite/deps/leader-line')) {
+                    if (id.includes('/leader-line')) {
                         return `${code};export default LeaderLine;`
                     }
                     return null
