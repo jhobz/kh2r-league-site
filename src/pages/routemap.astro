@@ -6,7 +6,76 @@ const worlds = await getCollection('randoRoute')
 ---
 
 <Layout>
+    <input id="uploadBtn" type="file" accept="text/*" />
+    <p id="output"></p>
     <div class="flex flex-col items-center gap-8 p-8">
         <RandoRoute worlds={worlds} />
     </div>
 </Layout>
+
+<script>
+    import type { InferEntrySchema } from 'astro:content'
+    type RouteSection = InferEntrySchema<'randoRoute'>
+
+    const uploadElem = document.getElementById('uploadBtn') as HTMLInputElement
+    const outputElem = document.getElementById('output') as HTMLInputElement
+    uploadElem.addEventListener('change', (e) => {
+        if (!uploadElem.files?.length) {
+            return
+        }
+
+        const [file] = uploadElem.files
+        handleFile(file)
+    })
+
+    const handleFile = (file: File) => {
+        if (!file) {
+            return
+        }
+
+        const reader = new FileReader()
+        reader.onload = (e) => {
+            // outputElem.innerText = e.target?.result as string
+            outputElem.innerText = JSON.stringify(
+                parseFile(e.target?.result as string)
+            )
+        }
+        reader.readAsText(file)
+    }
+
+    const parseFile = (contents: string) => {
+        const lines = contents.split('\r\n')
+        // [{
+        //      world: {
+        //          name: '', abbr: ''
+        //      },
+        //      rooms: [{
+        //          name: '', boss?: false
+        //      }]
+        // }]
+        const route: RouteSection[] = []
+
+        lines.forEach((line) => {
+            const [world, room] = line.split(' - ')
+
+            if (!world || !room) {
+                return
+            }
+
+            if (route.at(-1)?.world?.name !== world) {
+                route.push({
+                    world: {
+                        name: world,
+                        abbr: '',
+                    },
+                    rooms: [],
+                })
+            }
+
+            // @ts-expect-error 2532
+            route.at(-1).rooms.push({ name: room })
+        })
+
+        return route
+    }
+</script>
