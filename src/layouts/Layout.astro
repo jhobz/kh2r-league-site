@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css'
 import Nav from '../components/nav/Nav.astro'
+import { propsToFilename } from 'astro/assets/utils'
+
+interface Props {
+    title?: string
+}
 ---
 
 <!doctype html>
@@ -38,7 +43,7 @@ import Nav from '../components/nav/Nav.astro'
         <meta name="apple-mobile-web-app-title" content="KH2 Rando" />
         <link rel="manifest" href="/favicons/site.webmanifest" />
         <meta name="generator" content={Astro.generator} />
-        <title>KH2 Randomizer League</title>
+        <title>{Astro.props.title || 'KH2 Rando League'}</title>
     </head>
     <body>
         <Nav />
