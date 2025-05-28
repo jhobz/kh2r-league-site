@@ -1,17 +1,39 @@
 ---
+import AuthCard from '../components/AuthCard.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Register">
-    <h1>Register</h1>
-    <p>Already have an account? <a href="/signin">Sign in</a></p>
-    <form action="/api/auth/register" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
-        <label for="email" for="email">Email</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <button type="submit">Login</button>
-    </form>
+    <AuthCard img="/public/images/roxas-dream.webp">
+        <h1 class="card-title">Sign up</h1>
+        <form
+            class="flex flex-col gap-2 max-w-[20rem]"
+            action="/api/auth/register"
+            method="post"
+        >
+            <input
+                type="text"
+                name="name"
+                placeholder="Display name"
+                class="input"
+            />
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                class="input"
+            />
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                class="input"
+            />
+            <button type="submit" class="btn btn-accent">Create account</button>
+        </form>
+        <div class="divider">Already have an account?</div>
+        <p class="flex flex-col gap-2 max-w-[20rem]">
+            <a href="/signin" class="btn btn-primary">Sign in</a>
+        </p>
+    </AuthCard>
 </Layout>

@@ -3,12 +3,12 @@ export const prerender = false
 import { app } from '../firebase/server'
 import { getAuth } from 'firebase-admin/auth'
 import Layout from '../layouts/Layout.astro'
+import AuthCard from '../components/AuthCard.astro'
 
 /* Check if the user is authenticated */
 const auth = getAuth(app)
 if (Astro.cookies.has('__session')) {
-    // @ts-expect-error 2532
-    const sessionCookie = Astro.cookies.get('__session').value
+    const sessionCookie = Astro.cookies.get('__session')!.value
     const decodedCookie = await auth.verifySessionCookie(sessionCookie)
     if (decodedCookie) {
         return Astro.redirect('/dashboard')
@@ -17,21 +17,96 @@ if (Astro.cookies.has('__session')) {
 ---
 
 <Layout title="Sign in">
-    <h1>Sign in</h1>
-    <p>New here? <a href="/register">Create an account</a></p>
-    <form action="/api/auth/signin" method="post">
-        <label for="email" for="email">Email</label>
-        <input type="email" name="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <button type="submit">Login</button>
-    </form>
+    <AuthCard img="/public/images/signin-banner.jpg">
+        <h1 class="card-title">Sign in</h1>
+        <form
+            class="flex flex-col gap-2"
+            action="/api/auth/signin"
+            method="post"
+        >
+            <input
+                type="email"
+                name="email"
+                class="input"
+                placeholder="Email"
+            />
+            <input
+                type="password"
+                name="password"
+                class="input"
+                placeholder="Password"
+            />
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+
+        <div class="divider">OR</div>
+
+        <div class="flex flex-col gap-2">
+            <!-- Google -->
+            <button
+                class="btn btn-soft bg-white text-black border-[#e5e5e5]"
+                id="google"
+            >
+                <svg
+                    aria-label="Google logo"
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    ><g>
+                        <path d="m0 0H512V512H0" fill="#fff"></path><path
+                            fill="#34a853"
+                            d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"
+                        ></path>
+                        <path
+                            fill="#4285f4"
+                            d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"
+                        ></path>
+                        <path
+                            fill="#fbbc02"
+                            d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"
+                        ></path>
+                        <path
+                            fill="#ea4335"
+                            d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"
+                        ></path>
+                    </g></svg
+                >
+                Login with Google
+            </button>
+            <!-- Twitch -->
+            <button
+                class="btn btn-soft bg-[#6441a4] text-white border-[#6441a4]"
+                id="twitch"
+                disabled
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 64 64"
+                    ><path
+                        d="M5.7 0L1.4 10.985V55.88h15.284V64h8.597l8.12-8.12h12.418l16.716-16.716V0H5.7zm51.104 36.3L47.25 45.85H31.967l-8.12 8.12v-8.12H10.952V5.73h45.85V36.3zM47.25 16.716v16.716h-5.73V16.716h5.73zm-15.284 0v16.716h-5.73V16.716h5.73z"
+                        fill="white"
+                        fill-rule="evenodd"></path></svg
+                >
+                Login with Twitch
+            </button>
+        </div>
+
+        <div class="divider">OR</div>
+
+        <a class="btn btn-accent" href="/register">Create an account</a>
+    </AuthCard>
 </Layout>
+
 <script>
     import {
         getAuth,
         inMemoryPersistence,
         signInWithEmailAndPassword,
+        GoogleAuthProvider,
+        signInWithPopup,
     } from 'firebase/auth'
     import { app } from '../firebase/client'
 
@@ -64,6 +139,22 @@ if (Astro.cookies.has('__session')) {
 
         if (response.redirected) {
             window.location.assign(response.url)
+        }
+    })
+
+    const googleSignIn = document.querySelector('#google') as HTMLButtonElement
+    googleSignIn.addEventListener('click', async () => {
+        const provider = new GoogleAuthProvider()
+        const userCredential = await signInWithPopup(auth, provider)
+        const idToken = await userCredential.user.getIdToken()
+        const res = await fetch('/api/auth/signin', {
+            headers: {
+                Authorization: `Bearer ${idToken}`,
+            },
+        })
+
+        if (res.redirected) {
+            window.location.assign(res.url)
         }
     })
 </script>

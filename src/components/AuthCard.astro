@@ -1,0 +1,22 @@
+---
+interface Props {
+    img?: string
+    class?: string
+}
+const { img, class: className } = Astro.props
+---
+
+<div
+    class=`card card-xl lg:card-side card-border max-w-[24rem] lg:max-w-[48rem] mx-auto my-12 lg:my-48 bg-base-200 ${className || ''}`
+>
+    {
+        img && (
+            <figure class="max-h-[15rem] lg:max-h-none lg:w-1/2">
+                <img src={img} alt="" role="presentation" />
+            </figure>
+        )
+    }
+    <div class="card-body">
+        <slot />
+    </div>
+</div>

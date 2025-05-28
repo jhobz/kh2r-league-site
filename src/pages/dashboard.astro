@@ -3,6 +3,7 @@ export const prerender = false
 import { app } from '../firebase/server'
 import { getAuth } from 'firebase-admin/auth'
 import Layout from '../layouts/Layout.astro'
+import H1 from '../components/H1.astro'
 
 const auth = getAuth(app)
 
@@ -10,8 +11,7 @@ const auth = getAuth(app)
 if (!Astro.cookies.has('__session')) {
     return Astro.redirect('/signin')
 }
-// @ts-expect-error 2532
-const sessionCookie = Astro.cookies.get('__session').value
+const sessionCookie = Astro.cookies.get('__session')!.value
 const decodedCookie = await auth.verifySessionCookie(sessionCookie)
 const user = await auth.getUser(decodedCookie.uid)
 
@@ -21,9 +21,9 @@ if (!user) {
 ---
 
 <Layout title="dashboard">
-    <h1>Welcome {user.displayName}</h1>
-    <p>We are happy to see you here</p>
-    <form action="/api/auth/signout">
-        <button type="submit">Sign out</button>
+    <H1>Welcome, {user.displayName}</H1>
+    <p>We're happy to see you here</p>
+    <form class="mt-3" action="/api/auth/signout">
+        <button class="btn btn-outline" type="submit">Sign out</button>
     </form>
 </Layout>
