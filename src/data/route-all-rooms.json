@@ -126,10 +126,10 @@
         ]
     },
     {
-        "id": "lod",
+        "id": "tlod",
         "world": {
-            "name": "Land of Dragons",
-            "abbr": "lod"
+            "name": "The Land of Dragons",
+            "abbr": "tlod"
         },
         "rooms": [
             { "name": "Bamboo Grove" },
@@ -236,10 +236,10 @@
         ]
     },
     {
-        "id": "atl",
+        "id": "at",
         "world": {
             "name": "Atlantica",
-            "abbr": "atl"
+            "abbr": "at"
         },
         "rooms": [
             { "name": "Triton's Throne" },

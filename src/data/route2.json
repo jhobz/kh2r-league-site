@@ -50,8 +50,8 @@
     {
         "id": 5,
         "world": {
-            "name": "Land of Dragons",
-            "abbr": "lod"
+            "name": "The Land of Dragons",
+            "abbr": "tlod"
         },
         "rooms": [{ "name": "Bamboo Grove" }]
     },
