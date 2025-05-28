@@ -1,9 +1,16 @@
 ---
 import ThemeSwitcher from './ThemeSwitcher.astro'
+
+const links = [
+    { name: 'Home', href: '/' },
+    { name: 'Leaderboard', href: '/leaderboard' },
+    { name: 'Route Map', href: '/routemap' },
+    { name: 'Sign Up / Login', href: '/signin' },
+]
 ---
 
-<nav class="navbar bg-base-200 shadow-lg">
-    <div class="navbar-start">
+<nav class="navbar bg-base-100 shadow-lg">
+    <div class="navbar-start min-w-max">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
@@ -22,39 +29,44 @@ import ThemeSwitcher from './ThemeSwitcher.astro'
             </div>
             <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                class="menu menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-max p-2 shadow"
             >
-                <li><a href="/">Home</a></li>
-                <li>
-                    <a href="/leaderboard">Leaderboard</a>
-                </li>
-                <li><a href="/routemap">Route Map</a></li>
-                <li><a href="/signin">Sign Up / Login</a></li>
+                {
+                    links.map(({ href, name }) => (
+                        <li>
+                            <a href={href}>{name}</a>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
+
         <a href="/" class="flex gap-1 items-center text-xl ml-2">
-            <img class="size-12" src="/images/logo.png" /><span class="logo"
-                >KH2 Rando League</span
-            ></a
-        >
+            <img class="size-12" src="/images/logo.png" />
+            <span class="logo">KH2 Rando</span>
+        </a>
     </div>
+
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a href="/">Home</a></li>
-            <li>
-                <a href="/leaderboard">Leaderboard</a>
-            </li>
-            <li><a href="/routemap">Route Map</a></li>
-            <li><a href="/signin">Sign Up / Login</a></li>
+            {
+                links.map(({ href, name }) => (
+                    <li>
+                        <a href={href}>{name}</a>
+                    </li>
+                ))
+            }
         </ul>
     </div>
+
     <div class="navbar-end">
         <ThemeSwitcher />
     </div>
 </nav>
 
 <style>
-    .logo {
+    .logo,
+    .menu {
         font-family: 'khmenu';
     }
 </style>
