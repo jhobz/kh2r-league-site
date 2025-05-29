@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content'
 import { file } from 'astro/loaders'
+import { parse as parseRandoLog } from './parsers/kh2-rando-logger'
 
 const rankings = defineCollection({
     loader: file('./src/data/leaderboard.json'),
@@ -13,7 +14,9 @@ const rankings = defineCollection({
 })
 
 const randoRoute = defineCollection({
-    loader: file('./src/data/route2.json'),
+    loader: file('./src/data/real-log.txt', {
+        parser: parseRandoLog,
+    }),
     schema: z.object({
         world: z.object({
             name: z.string(),
